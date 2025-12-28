@@ -154,42 +154,49 @@ main {
   justify-content: center;
   padding: clamp(48px, 8vw, 120px) 0;
 }
-.name-wrap {
+.name-wrap{
+  --fn-size: clamp(72px, 14vw, 180px);  /* your exact first-name clamp */
   position: relative;
   width: fit-content;
+  max-width: 100%;
   text-align: center;
 }
 
 .first-name {
-  font-size: clamp(72px, 14vw, 180px);
+  font-size: var(--fn-size);
   font-weight: 800;
-  line-height: 0.9;
-  transform: scaleY(1.1);
+  line-height: 0.78;
   margin: 0;
   letter-spacing: -0.04em;
   color: #000;
   font-family: BebasNeue, sans-serif;
+  white-space: nowrap;
 }
-
+.first-name-text {
+  display: inline-block;   /* 🔒 exact glyph width */
+  white-space: nowrap;
+}
 /* LAST NAME overlay */
 .last-name {
   position: absolute;
   left: 0;
-  width: 100%;
-  top: 23%;                 /* optical alignment */
-  transform: translateY(-50%);
+  width: 100%;        /* equals .name-wrap width = first-name width */
+  max-width: 100%;
   pointer-events: none;
+  overflow: hidden;   /* hard guarantee: never wider visually */
+  top: calc(var(--fn-size) * 0.33); /* ✅ proportional position */
+  transform: translateY(-50%);
 }
 
 .last-name-track {
   display: grid;
-  grid-template-columns: repeat(15, 1fr);  /* number of letters */
+  grid-template-columns: repeat(15, 1fr);
   align-items: center;
 
   background: #fff;
   padding: 1px 0;
 
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: calc(var(--fn-size) * 0.12); /* ✅ proportional to first name */
   font-weight: 600;
   text-transform: uppercase;
   color: #000;
@@ -197,6 +204,7 @@ main {
 
 .last-name-track span {
   text-align: center;
+  min-width: 0;
 }
 
 .tagline {
@@ -371,7 +379,6 @@ main {
     position: absolute;
     top: 64px;
     right: var(--pad);
-    left: var(--pad);
     flex-direction: column;
     gap: 8px;
     padding: 12px;
@@ -382,12 +389,24 @@ main {
 
   .nav-links.open { display: flex; }
 
-  .nav-links a {
-    width: 100%;
-    padding: 12px 12px;
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+
     border: 1px solid var(--border);
-    background: #fafafa;
+    border-radius: 12px;
+    background: #fff;
+
+    min-width: 140px;   /* same visual size as button */
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
   }
+
 
   /* keep the surname readable */
   .last-name span { letter-spacing: 0.28em; }

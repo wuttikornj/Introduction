@@ -9,17 +9,24 @@
 <body>
 
 <header class="site-header">
-  <nav class="nav">
+    <nav class="nav">
       <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-mark">WTTKRN</span>
       </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-</header>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <ul id="navMenu" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <main class="projects-page">
 
