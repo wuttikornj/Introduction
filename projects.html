@@ -2,26 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Projects | Wuttikorn Jiraroongrojana</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Wuttikorn Jiraroongrojana</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="aboutme.html">About</a>
-      <!-- <a href="blog.html">Blog</a> -->
-    </nav>
+
+<header class="site-header">
+  <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark">WTTKRN</span>
+      </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="projects-page">
+
+  <header class="projects-hero">
+    <h1>Projects</h1>
+    <p class="projects-intro">
+      Academic and personal projects, ordered by most recent.
+    </p>
   </header>
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Description of your project goes here.</p>
-    </div>
-  </section>
+
+  <div class="projects-timeline">
+
+    <!-- PROJECT 1 -->
+    <article class="timeline-entry right">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-card">
+        <h2>Lane Mark Detection Using Deep Learning for Autonomous Vehicles</h2>
+        <p class="timeline-meta">
+          Oct. 2025 – Present <br>
+          Dissertation · Python, OpenCV, PyTorch<br>
+        </p>
+
+        <button class="expand-btn">View Details</button>
+
+        <div class="timeline-details">
+          <ul>
+            <li>Designed and implemented a Python-based lane detection pipeline using deep learning and computer vision.</li>
+            <li>Built and trained CNN-based segmentation models with preprocessing and augmentation.</li>
+            <li>Evaluated performance using quantitative metrics and visual validation.</li>
+            <li>Conducted structured experiments to justify model and preprocessing choices.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2 -->
+    <article class="timeline-entry left">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-card">
+        <h2>QPC IP Checker</h2>
+        <p class="timeline-meta">
+          Nov. 2025 – Dec. 2025 <br>
+          Assessment Project · Python, Node.js, Go, Rust, PHP, JavaScript, C# (.NET)<br>
+        </p>
+
+        <button class="expand-btn">View Details</button>
+
+        <div class="timeline-details">
+          <ul>
+            <li>Designed and deployed a containerised multi-service system on Queen’s Private Cloud.</li>
+            <li>Implemented a custom reverse proxy with dynamic configuration, health checks, and failover.</li>
+            <li>Improved frontend error handling and multi-endpoint failover logic.</li>
+            <li>Debugged networking, timeout, and system-level failure issues.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 3 -->
+    <article class="timeline-entry right">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-card">
+        <h2>Pedestrian Detection System</h2>
+        <p class="timeline-meta">
+          Nov. 2025 – Dec. 2025 <br>
+          Group Project · MATLAB<br>
+        </p>
+
+        <button class="expand-btn">View Details</button>
+
+        <div class="timeline-details">
+          <ul>
+            <li>Built a full pedestrian detection pipeline using HOG, PCA, and classical classifiers.</li>
+            <li>Benchmarked SVM, K-NN, and Nearest Neighbour using precision, recall, and F1-score.</li>
+            <li>Implemented multi-scale sliding window detection with Non-Maximum Suppression.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 4 -->
+    <article class="timeline-entry left">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-card">
+        <h2>Finance Manager 2.0</h2>
+        <p class="timeline-meta">
+          May. 2025 <br>
+          Personal Project · Python<br>
+        </p>
+
+        <button class="expand-btn">View Details</button>
+
+        <div class="timeline-details">
+          <ul>
+            <li>Automated transaction processing and categorisation, reducing manual input by 60%.</li>
+            <li>Integrated Google Drive and Sheets APIs to manage 1,000+ transactions.</li>
+            <li>Achieved 85% categorisation accuracy through rule-based testing.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 5 -->
+    <article class="timeline-entry right">
+      <span class="timeline-dot"></span>
+
+      <div class="timeline-card">
+        <h2>Engineering for People Design Challenge</h2>
+        <p class="timeline-meta">
+          Jan. 2025 – Mar. 2025 <br>
+          Group Project · Java<br>
+        </p>
+
+        <button class="expand-btn">View Details</button>
+
+        <div class="timeline-details">
+          <ul>
+            <li>Collaborated in a six-person team to design a Java-based game system.</li>
+            <li>Led unit testing with JUnit, achieving 80% coverage and identifying 25+ issues.</li>
+            <li>Produced 8 use case diagrams covering 95% of user scenarios.</li>
+            <li>Presented technical findings clearly to support design decisions.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+
+
+<footer class="footer">
+  <p>© 2026 Wuttikorn Jiraroongrojana</p>
+</footer>
+
 </body>
 </html>

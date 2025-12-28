@@ -2,25 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wuttikorn Jiraroongrojana | Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wuttikorn Jiraroongrojana | Computer Science</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>Wuttikorn Jiraroongrojana</h1>
-    <!-- <p>Aspiring Software Developer</p> -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="aboutme.html">About</a>
-        <!-- <a href="blog.html">Blog</a> -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark">WTTKRN</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <ul id="navMenu" class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section>
-    <h2>Welcome</h2>
-    <p>This is your homepage. Use this space to make a brief introduction or highlight what's new.</p>
-  </section>
+  <main>
+    <!-- NAME HERO -->
+    <section class="name-hero">
+      <div class="name-wrap">
+        <!-- Big first name -->
+        <h1 class="first-name">WUTTIKORN</h1>
+
+        <!-- Tiny last name across the middle -->
+        <div class="last-name">
+          <div class="last-name-track">
+            <span>J</span><span>I</span><span>R</span><span>A</span><span>R</span>
+            <span>O</span><span>O</span><span>N</span><span>G</span><span>R</span>
+            <span>O</span><span>J</span><span>A</span><span>N</span><span>A</span>
+          </div>
+        </div>
+
+        <!-- Supporting line (optional) -->
+        <p class="tagline">
+          BSc Computer Science Student | Queen's University Belfast
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="projects.html">View my work</a>
+          <a class="btn ghost" href="about.html">Learn more about me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTIONS (so scrolling reveals “what to click”)
+    <section class="home-section" id="quick-links">
+      <h2>Explore</h2>
+
+      <div class="grid-2">
+        <a class="panel" href="projects.html">
+          <h3>Projects</h3>
+          <p>See my work by date, with full engineering breakdown: problem → approach → results.</p>
+          <span class="panel-link">Open Projects →</span>
+        </a>
+
+        <a class="panel" href="about.html">
+          <h3>About</h3>
+          <p>Education, contacts, CV download, and how I work day-to-day as an engineer.</p>
+          <span class="panel-link">Open About →</span>
+        </a>
+      </div>
+    </section> -->
+
+    <section class="home-section" id="experience">
+      <h2>Work Experience</h2>
+
+      <div class="stack">
+
+        <article class="card expandable" tabindex="0">
+          <div class="card-top">
+            <h3>Web Developer Intern — <em>Proghurt Thailand</em></h3>
+            <span class="pill">Jun 2025 – Sep 2025</span>
+          </div>
+
+          <div class="card-details">
+            <ul>
+              <li>Designed and implemented production features end-to-end using HTML, CSS, and JavaScript.</li>
+              <li>Built a secure admin blog management system, reducing publishing time by ~80%.</li>
+              <li>Debugged live issues, validated backend workflows, and handled edge cases.</li>
+              <li>Collaborated with stakeholders using Git-based workflows and Agile practices.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card expandable" tabindex="0">
+          <div class="card-top">
+            <h3>Server & Cashier (Part-time) — <em>Thai Village</em></h3>
+            <span class="pill">Nov 2023 – Present</span>
+          </div>
+
+          <div class="card-details">
+            <ul>
+              <li>Balanced part-time work alongside full-time Computer Science studies.</li>
+              <li>Developed strong communication and teamwork skills in a fast-paced environment.</li>
+              <li>Demonstrated reliability, time management, and customer-facing professionalism.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Wuttikorn Jiraroongrojana</p>
+  </footer>
 </body>
 </html>
