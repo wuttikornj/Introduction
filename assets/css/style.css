@@ -332,6 +332,16 @@ main {
   white-space: nowrap;
 }
 
+.card-links {
+  margin-bottom: 10px;
+}
+
+.card-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: underline;
+}
 /* =========================
    FOOTER
 ========================= */
@@ -616,9 +626,10 @@ main {
 }
 
 .timeline-details ul {
-  margin: 12px 0 0 18px;
+  margin: 12px 0 0 0px;
   font-size: 14px;
   color: var(--muted);
+  padding-left: 30px;
 }
 
 /* BUTTON */
@@ -681,9 +692,11 @@ main {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
+  margin-top: 36px;
 }
-
+/*   font-size: clamp(36px, 5vw, 56px);
+  margin-bottom: 10px; */
 .about-hero h1 {
   font-size: clamp(36px, 5vw, 56px);
   margin: 0;
